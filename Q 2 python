@@ -1,0 +1,29 @@
+from collections import Counter
+
+def highest_frequency_word_length(input_string):
+    # Split the string into words
+    words = input_string.split()
+
+    # Count the frequency of each word
+    word_counts = Counter(words)
+
+    # Find the word with the highest frequency
+    most_common_word, highest_frequency = word_counts.most_common(1)[0]
+
+    # Return the length of the highest-frequency word
+    return len(most_common_word)
+
+# Example usage:
+input_string = "apple banana cherry apple banana apple"
+result = highest_frequency_word_length(input_string)
+print(f"Length of the highest-frequency word: {result}")
+
+
+"""
+In this program, the Counter class from the collections module is 
+used to count the frequency of each word in the input string. 
+The most_common(1) method is then used to find the word with the highest frequency. 
+Finally, the length of that word is returned.
+
+
+"""
